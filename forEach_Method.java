@@ -48,3 +48,10 @@ public class test {
     }
 
 }
+//***************************************************************************************************************************************
+//using stream
+//Values is an array containing elements
+//To print values of array values:
+Arrays.stream(values).forEach(System.out::println);
+//Or
+Arrays.stream(values).forEach(i -> System.out.println(i));
