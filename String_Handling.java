@@ -162,6 +162,13 @@ Output:
   hello string   javatpoint
 hello stringjavatpoint   
 //***************************************************************************************************************************************
+//Java String startsWith() and endsWith() method
+String s="Sachin";  
+ System.out.println(s.startsWith("Sa"));//true  
+ System.out.println(s.endsWith("n"));//true  
+Output:
+true
+true
 //***************************************************************************************************************************************
 //***************************************************************************************************************************************
 class Teststringcomparison2{  
@@ -176,4 +183,101 @@ class Teststringcomparison2{
 Output:
 false
 true
+//***************************************************************************************************************************************
+//The String compareTo() method compares values lexicographically and returns an integer value that describes if first string is less than, equal to or greater than second string.
+
+//Suppose s1 and s2 are two string variables. If:
+
+//s1 == s2 :0
+//s1 > s2   :positive value
+//s1 < s2   :negative value
+    
+class Teststringcomparison4{  
+ public static void main(String args[]){  
+   String s1="Sachin";  
+   String s2="Sachin";  
+   String s3="Ratan";  
+   System.out.println(s1.compareTo(s2));//0  
+   System.out.println(s1.compareTo(s3));//1(because s1>s3)  
+   System.out.println(s3.compareTo(s1));//-1(because s3 < s1 )  
+ }  
+}  
+Output:0
+       1
+       -1
+    
+    
+public class CompareToExample{  
+public static void main(String args[]){  
+String s1="hello";  
+String s2="hello";  
+String s3="meklo";  
+String s4="hemlo";  
+String s5="flag";  
+System.out.println(s1.compareTo(s2));//0 because both are equal  
+System.out.println(s1.compareTo(s3));//-5 because "h" is 5 times lower than "m"  
+System.out.println(s1.compareTo(s4));//-1 because "l" is 1 times lower than "m"  
+System.out.println(s1.compareTo(s5));//2 because "h" is 2 times greater than "f"  
+}}  
+
+Output:
+0
+-5
+-1
+2
+//***************************************************************************************************************************************
+//Java StringBuilder Examples
+
+//1) StringBuilder append() method
+//The StringBuilder append() method concatenates the given argument with this string.
+
+class StringBuilderExample{  
+public static void main(String args[]){  
+StringBuilder sb=new StringBuilder("Hello ");  
+sb.append("Java");//now original string is changed  
+System.out.println(sb);//prints Hello Java  
+}  
+}  
+//2) StringBuilder insert() method
+//The StringBuilder insert() method inserts the given string with this string at the given position.
+
+class StringBuilderExample2{  
+public static void main(String args[]){  
+StringBuilder sb=new StringBuilder("Hello ");  
+sb.insert(1,"Java");//now original string is changed  
+System.out.println(sb);//prints HJavaello  
+}  
+}  
+//3) StringBuilder replace() method
+//The StringBuilder replace() method replaces the given string from the specified beginIndex and endIndex.
+
+class StringBuilderExample3{  
+public static void main(String args[]){  
+StringBuilder sb=new StringBuilder("Hello");  
+sb.replace(1,3,"Java");  
+System.out.println(sb);//prints HJavalo  
+}  
+}
+
+//4) StringBuilder delete() method
+//The delete() method of StringBuilder class deletes the string from the specified beginIndex to endIndex.
+
+class StringBuilderExample4{  
+public static void main(String args[]){  
+StringBuilder sb=new StringBuilder("Hello");  
+sb.delete(1,3);  
+System.out.println(sb);//prints Hlo  
+}  
+} 
+
+//5) StringBuilder reverse() method
+//The reverse() method of StringBuilder class reverses the current string.
+
+class StringBuilderExample5{  
+public static void main(String args[]){  
+StringBuilder sb=new StringBuilder("Hello");  
+sb.reverse();  
+System.out.println(sb);//prints olleH  
+}  
+}  
 //***************************************************************************************************************************************
