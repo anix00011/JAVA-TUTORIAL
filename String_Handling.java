@@ -8,10 +8,10 @@ System.out.println(s1);
 System.out.println(s2);  
 System.out.println(s3);  
 }}  
-//Output:
-//java
-//strings
-//example
+Output:
+java
+strings
+example
 //***************************************************************************************************************************************
 public class CharAtExample{  
 public static void main(String args[]){  
@@ -19,8 +19,8 @@ String name="javatpoint";
 char ch=name.charAt(4);//returns the char value at the 4th index  
 System.out.println(ch);  
 }}  
-//Output:
-//t
+Output:
+t
 //***************************************************************************************************************************************
 public class SubstringExample{  
 public static void main(String args[]){  
@@ -28,9 +28,9 @@ String s1="javatpoint";
 System.out.println(s1.substring(2,4));//returns va  
 System.out.println(s1.substring(2));//returns vatpoint  
 }}  
-//Output:
-//va
-//vatpoint
+Output:
+va
+vatpoint
 //***************************************************************************************************************************************
 class ContainsExample{  
 public static void main(String args[]){  
@@ -39,18 +39,18 @@ System.out.println(name.contains("do you know"));
 System.out.println(name.contains("about"));  
 System.out.println(name.contains("hello"));  
 }}  
-//Output:
-//true
-//true
-//false
+Output:
+true
+true
+false
 //***************************************************************************************************************************************
 public class StringJoinExample{  
 public static void main(String args[]){  
 String joinString1=String.join("-","welcome","to","javatpoint");  
 System.out.println(joinString1);  
 }}  
-//Output:
-//welcome-to-javatpoint
+Output:
+welcome-to-javatpoint
 
 public class StringJoinExample2 {  
     public static void main(String[] args) {          
@@ -60,8 +60,8 @@ public class StringJoinExample2 {
         System.out.println(" "+time);  
     }  
 }  
-//Output:
-//25/06/2018 12:10:10
+Output:
+25/06/2018 12:10:10
 //***************************************************************************************************************************************
 public class EqualsExample{  
 public static void main(String args[]){  
@@ -73,10 +73,10 @@ System.out.println(s1.equals(s2));//true because content and case is same
 System.out.println(s1.equals(s3));//false because case is not same  
 System.out.println(s1.equals(s4));//false because content is not same  
 }}  
-//Output:
-//true
-//false
-//false
+Output:
+true
+false
+false
 //***************************************************************************************************************************************
 public class IsEmptyExample{  
 public static void main(String args[]){  
@@ -86,9 +86,9 @@ String s2="javatpoint";
 System.out.println(s1.isEmpty());  
 System.out.println(s2.isEmpty());  
 }}  
-//Output:
-//true
-//false
+Output:
+true
+false
 //***************************************************************************************************************************************
 public class ReplaceExample2{  
 public static void main(String args[]){  
@@ -96,8 +96,8 @@ String s1="my name is khan my name is java";
 String replaceString=s1.replace("is","was");//replaces all occurrences of "is" to "was"  
 System.out.println(replaceString);  
 }}  
-//Output:
-//my name was khan my name was java
+Output:
+my name was khan my name was java
 //***************************************************************************************************************************************
 public class SplitExample2{  
 public static void main(String args[]){  
@@ -116,17 +116,17 @@ System.out.println(w);
 }  
   
 }}  
-//Output:
-//returning words:
-//welcome 
-//to 
-//split 
-//world
-//returning words:
-//welcome to split world
-//returning words:
-//welcome 
-//to split world
+Output:
+returning words:
+welcome 
+to 
+split 
+world
+returning words:
+welcome to split world
+returning words:
+welcome 
+to split world
 //***************************************************************************************************************************************
 public class IndexOfExample2 {  
     public static void main(String[] args) {  
@@ -137,8 +137,8 @@ public class IndexOfExample2 {
     }  
   
 }  
-//Output:
-//index of substring 16
+Output:
+index of substring 16
 //***************************************************************************************************************************************
 public class StringValueOfExample{  
 public static void main(String args[]){  
@@ -146,8 +146,8 @@ int value=30;
 String s1=String.valueOf(value);  
 System.out.println(s1+10);//concatenating string with 10  
 }}  
-//Output:
-//3010
+Output:
+3010
 //***************************************************************************************************************************************
 //string with omitted leading and trailing spaces
 
@@ -158,9 +158,22 @@ String s1="  hello string   ";
 System.out.println(s1+"javatpoint");//without trim()  
 System.out.println(s1.trim()+"javatpoint");//with trim()  
 }}  
-//Output:
-//  hello string   javatpoint
-//hello stringjavatpoint   
+Output:
+  hello string   javatpoint
+hello stringjavatpoint   
 //***************************************************************************************************************************************
-
+//***************************************************************************************************************************************
+//***************************************************************************************************************************************
+class Teststringcomparison2{  
+ public static void main(String args[]){  
+   String s1="Sachin";  
+   String s2="SACHIN";  
+  
+   System.out.println(s1.equals(s2));//false  
+   System.out.println(s1.equalsIgnoreCase(s2));//true  
+ }  
+}  
+Output:
+false
+true
 //***************************************************************************************************************************************
