@@ -292,3 +292,44 @@ System.out.println(sb);//prints olleH
 }  
 }  
 //***************************************************************************************************************************************
+//The java.lang.Object.toString() method returns a string representation of the object. In general,
+//the toString method returns a string that "textually represents" this object. 
+//The result should be a concise but informative representation that is easy for a person to read. 
+//It is recommended that all subclasses override this method.
+
+import java.util.ArrayList;
+
+public class ObjectDemo {
+
+   public static void main(String[] args) {
+
+      // get an integer
+      Integer i = new Integer(50);
+
+      // get a list
+      ArrayList list = new ArrayList();
+
+      // add some elements in list
+      list.add(50);
+      list.add("Hello World");
+
+      // print their string representation
+      System.out.println("" + i.toString());//works also for other types including Character
+      System.out.println("" + list.toString());
+   }
+}
+Output:
+50
+[50, Hello World]
+//***************************************************************************************************************************************
+public class LastIndexOfExample2 {  
+    public static void main(String[] args) {  
+        String str = "This is index of example";  
+        int index = str.lastIndexOf('s',5);  
+        System.out.println(index);        
+    }  
+}  
+
+Output:
+3
+//***************************************************************************************************************************************
