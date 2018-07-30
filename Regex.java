@@ -141,6 +141,15 @@ public class test {
 Output:
 x went for a walk, and x fell down, and x hurt his knee.
 \\******************************************************************************************************************************
+    public class GFG {
+
+    public static void main(String[] args) {
+       String x= "45fgf84fgxdg8848dfhd4";
+        System.out.println(x.replaceAll("\\D","").length());//replaces non numeric value with given
+    }
+}
+Output:
+9                      
 \\******************************************************************************************************************************
 \\******************************************************************************************************************************
 We can group multiple characters as a unit by parentheses. For example, (ab).
@@ -216,10 +225,36 @@ The code above generates the following result:
 Text:1234567890, 12345, and 9876543210
 Formatted Text:(123)456-7890,12345, and (987)654-3210
 
-\\******************************************************************************************************************************
+\\******************************************************************************************************************************   
+Word Boundaries
+    
+\b is a zero with assertion. That means it does not match a character, it matches a position with one thing on the left side and another thing on the right side.
 
-\\******************************************************************************************************************************
+The word boundary \b matches on a change from a \w (a word character) to a \W a non word character, or from \W to \w
 
+Which characters are included in \w depends on your language. At least there are all ASCII letters, all ASCII numbers and the underscore. If your regex engine supports unicode, it could be that there are all letters and numbers in \w that have the unicode property letter or number.
+
+\W are all characters, that are NOT in \w.
+
+\bbrown\s
+will match here
+
+The quick brown fox
+         ^^
+but not here
+
+The quick bbbbrown fox
+because between b and brown is no word boundary, i.e. no change from a non word character to a word character, both characters are included in \w.
+\\******************************************************************************************************************************
+public class test {
+    public static void main(String[] args) throws Exception {
+        String s=" 45 5 5 4 4 3 2 6666 3333 6 5 656565";
+        String p="\\b[1-9][0-9]{3}\\b";// \b[1-9][0-9]{3}\b to match a number between 1000 and 9999. \b[1-9][0-9]{2,4}\b matches a number between 100 and 99999.
+        System.out.println(s.replaceAll(p,"x"));
+    }
+}
+Output:
+45 5 5 4 4 3 2 x x 6 5 656565
 \\******************************************************************************************************************************
 
 \\******************************************************************************************************************************
