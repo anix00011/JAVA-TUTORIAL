@@ -80,3 +80,52 @@ class test
             System.out.println ( "Value: " + arr[i]) ;
     }
 }
+//***********************************************************************************************************************************
+//***********************************************************************************************************************************
+Java Hashtable class
+Java Hashtable class implements a hashtable, which maps keys to values. It inherits Dictionary class and implements the Map interface.
+
+The important points about Java Hashtable class are:
+
+A Hashtable is an array of list. Each list is known as a bucket. The position of bucket is identified by calling the hashcode() method. A Hashtable contains values based on the key.
+It contains only unique elements.
+It may have not have any null key or value.
+It is synchronized
+
+K: It is the type of keys maintained by this map.
+V: It is the type of mapped values.
+Methods of Java Hashtable class
+void clear()	It is used to reset the hash table.
+boolean contains(Object value)	This method return true if some value equal to the value exist within the hash table, else return false.
+boolean containsValue(Object value)	This method return true if some value equal to the value exists within the hash table, else return false.
+boolean containsKey(Object key)	This method return true if some key equal to the key exists within the hash table, else return false.
+boolean isEmpty()	This method return true if the hash table is empty; returns false if it contains at least one key.
+void rehash()	It is used to increase the size of the hash table and rehashes all of its keys.
+Object get(Object key)	This method return the object that contains the value associated with the key.
+Object remove(Object key)	It is used to remove the key and its value. This method return the value associated with the key.
+int size()	This method return the number of entries in the hash table.
+Java Hashtable Example
+
+import java.util.*;  
+class TestCollection16{  
+ public static void main(String args[]){  
+  Hashtable<Integer,String> hm=new Hashtable<Integer,String>();  
+  
+  hm.put(100,"Amit");  
+  hm.put(102,"Ravi");  
+  hm.put(101,"Vijay");  
+  hm.put(103,"Rahul");  
+  
+  for(Map.Entry m:hm.entrySet()){  
+   System.out.println(m.getKey()+" "+m.getValue());  
+  }  
+ }  
+}  
+
+Output:
+
+103 Rahul
+102 Ravi
+101 Vijay
+100 Amit
+       
